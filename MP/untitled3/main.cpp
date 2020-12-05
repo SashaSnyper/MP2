@@ -5,12 +5,12 @@
 #include <semaphore.h>
 #include <ctime>
 #include <iostream>
-#ifdef _WIN32
 #include <conio.h>
 #include <vector>
+#ifdef _WIN32
 #include <Windows.h>
-#define Sleep(x) Sleep(x)
-#define wait() _getch()
+    #define Sleep(x) Sleep(x)
+    #define wait() _getch()
 #else
 #include <unistd.h>
     #define Sleep(x) sleep(x)
